@@ -1,0 +1,12 @@
+package com.java.assignment2;
+
+public class CompetitiveExamCourses {
+	
+	private int courseId;
+	private String courseName;
+	private String courceTeacher;
+	private int courseDuration;
+	private double totalFee;
+	
+
+}

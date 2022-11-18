@@ -1,0 +1,28 @@
+package com.java.assignment2;
+
+import java.util.List;
+
+public class CompetitiveExamCoursesDB {
+	
+	
+	public static List<CompetitiveExamCourses> getCompetitiveExamCoursesList(){
+		
+		CompetitiveExamCourses c1=new CompetitiveExamCourses(1,"JEE","ABC",18,50000);
+		CompetitiveExamCourses c2=new CompetitiveExamCourses(2,"CAT","CDE",18,50000);
+		CompetitiveExamCourses c3=new CompetitiveExamCourses(3,"NEET","EFG",18,50000);
+		CompetitiveExamCourses c4=new CompetitiveExamCourses(4,"JRE","GHI",18,50000);
+		CompetitiveExamCourses c5=new CompetitiveExamCourses(5,"JRF","IJK",18,50000);
+		CompetitiveExamCourses c6=new CompetitiveExamCourses(6,"IAS","KLM",18,50000);
+		CompetitiveExamCourses c7=new CompetitiveExamCourses(7,"UPSC","MNO",18,50000);
+		CompetitiveExamCourses c8=new CompetitiveExamCourses(8,"BPSC","OPQ",18,50000);
+		CompetitiveExamCourses c9=new CompetitiveExamCourses(9,"BANK PO","RST",18,50000);
+		CompetitiveExamCourses c10=new CompetitiveExamCourses(10,"INDIAN RAIL","TUV",18,50000);
+		CompetitiveExamCourses c11=new CompetitiveExamCourses(11,"CDS","VWX",18,50000);
+		CompetitiveExamCourses c12=new CompetitiveExamCourses(12,"INDIAN ARAMY","XYZ",18,50000);
+		CompetitiveExamCourses c13=new CompetitiveExamCourses(13,"INDIAN NAVY","ZAB",18,50000);
+		CompetitiveExamCourses c14=new CompetitiveExamCourses(14,"PUC","BAC",18,50000);
+		CompetitiveExamCourses c15=new CompetitiveExamCourses(15,"GENERAL","CAD",18,50000);
+		
+	}
+
+}

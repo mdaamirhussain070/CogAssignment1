@@ -1,0 +1,10 @@
+package com.java.assignment2;
+
+public class CompetitiveExamCourses {
+	
+	private int courceId;
+	private String courceName;
+	private String courceTeacher;
+	
+
+}
