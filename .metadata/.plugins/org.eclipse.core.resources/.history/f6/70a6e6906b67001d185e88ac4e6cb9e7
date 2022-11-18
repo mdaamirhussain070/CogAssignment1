@@ -1,0 +1,60 @@
+package com.java.assignment;
+
+import java.time.LocalDate;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class DriverClass {
+	
+	
+//	1: Obtain a list of items belongs to category “Mobiles”
+	public static  void getListOfItemBelogToCategoryMobile() {
+		
+				List<Item> items=Item.getAllItem().stream()
+				.filter((item)->item.getCategory()=="Mobiles")
+		.collect(Collectors.toList());
+				items.forEach((p)->System.out.println(p));
+	}
+	
+//2: Obtain a list of items belongs to category “Mobiles” and price is greater than 20000
+	public static void getListOfItemCaMoPrG() {
+		
+			Item.getAllItem().stream()
+				.filter((s)->s.getCategory()=="Mobiles")
+				.filter((s)->s.getPrice()>20000)
+				.forEach((s)->System.out.println(s));
+	}
+	
+//3: Obtain a list of order with items category is not “Mobiles”
+	public static void getListOfOrderCategoryNotMobile() {
+		
+//		Order.getOrderList().stream()
+//							.map((s)->s.getItems().stream()
+//									.filter((sp->sp.getCategory()!="Mobiles")
+//									).forEach((t)->System.out.println(t)));
+							
+							
+	}
+	
+//	4: Obtain a list of items with category “Laptops” and then apply 5% discount
+	
+	public static void getListOfItemWithCatogaryLaptopAnd() {
+		
+		Item.getAllItem().stream()
+						.filter((s)->s.getCategory()=="Laptops")
+						.forEach((s)->{
+							System.out.print("id = "+s.getId());
+							System.out.print(" name = "+s.getName());
+							System.out.print(" price = "+(s.getPrice()-(s.getPrice()*5)/100));
+							System.out.print(" category = "+s.getCategory());
+						});
+	}
+	public static void main(String[] args) {
+	//	getListOfItemBelogToCategoryMobile();
+		getListOfItemCaMoPrG();
+		getListOfItemWithCatogaryLaptopAnd();
+
+	}
+
+}

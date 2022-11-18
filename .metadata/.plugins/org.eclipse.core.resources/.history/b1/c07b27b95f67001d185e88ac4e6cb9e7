@@ -1,0 +1,25 @@
+package com.java.assignment;
+
+import java.time.LocalDate;
+
+import java.util.List;
+
+public class DriverClass {
+	
+	
+//	1: Obtain a list of items belongs to category “Mobiles”
+	public static  void getListOfItemBelogToCategoryMobile() {
+		
+				System.out.println("Start");
+		         Item.getAllItem().stream()
+				.filter((s)->s.getCategory().equalsIgnoreCase("Mobile"))
+				.forEach((p)->System.out.println(p));
+	}
+	
+
+	public static void main(String[] args) {
+		getListOfItemBelogToCategoryMobile();
+
+	}
+
+}

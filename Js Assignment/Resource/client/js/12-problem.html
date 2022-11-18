@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="ele1" value="0" type="number" /><br/>
+    <input id="ele2" value="0" type="number" /><br/>
+
+    <button onclick="doTask()">Add</button>
+    <br/>
+    <h2>Result: <mark id="output">0</mark></h2>
+
+    <script>
+
+        let add = function(n1, n2){
+            return n1+n2;
+        }
+
+        let doTask = function(){
+            let num1 = document.getElementById("ele1").value;
+            let num2 = document.getElementById("ele2").value;
+            
+            document.getElementById("output").innerText = add(num1, num2);
+        }
+    </script>
+</body>
+</html>

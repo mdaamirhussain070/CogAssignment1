@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img id="poster" src="./assets/images/jai_shree_ram.png" alt="jai_shree_ram" />
+    <audio id="player" controls>
+        <source type="audio/mpeg" src="./assets/mp3/jai_shree_ram.mp3"></source>
+    </audio>
+
+    <ul>
+        <li>jai_shree_ram</li>
+        <li>shotgun_sound</li>
+        <li>ubuntu_startup</li>
+    </ul>
+
+    <script>
+        let list = document.getElementsByTagName("li");
+        for(let i=0;i<list.length;i++){
+            list[i].addEventListener("click", function(event){
+                console.log(event.target.innerText);
+                document.getElementById('poster').src = "./assets/images/"+event.target.innerText+".png"
+                document.getElementById('player').src = "./assets/mp3/"+event.target.innerText+".mp3"
+                document.getElementById('player').play()
+            })
+        }
+    </script>
+</body>
+</html>

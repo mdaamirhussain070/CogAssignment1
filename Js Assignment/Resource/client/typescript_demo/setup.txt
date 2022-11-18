@@ -1,0 +1,12 @@
+- download and install nodejs
+    - verify nodejs 
+    $ node -v 
+    $ npm -v 
+
+- install typescript
+    $ npm i -g typescript 
+
+- initialize current path (project) with tsc 
+    $ tsc init 
+    $ tsc 
+        - this command will transpile ts into js

@@ -1,0 +1,28 @@
+
+Create a list of names
+	Spiderman
+	Superman
+	Hulk
+	Antman
+	Ironman
+	Shaktiman
+	Hanuman
+
+=> stream api
+	
+Do write code to find
+	1. find all names ending with "man" and
+	2. find all names starting with "s" or "S" and
+	3. change all names to uppercase and
+	4. print
+	
+-----------------
+
+
+Stream with object:
+Create a list of employee (5)
+	Employee 
+		id, salary, experience, name
+
+
+find all employees where experience is greater than 4 years and sort the list based on salary, if salary is same sort on name.

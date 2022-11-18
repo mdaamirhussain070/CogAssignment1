@@ -1,0 +1,97 @@
+package com.java.assignment;
+
+import java.time.LocalDate;
+
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class DriverClass {
+	
+	
+//	1: Obtain a list of items belongs to category “Mobiles”
+	public static  void getListOfItemBelogToCategoryMobile() {
+		
+				List<Item> items=Item.getAllItem().stream()
+				.filter((item)->item.getCategory()=="Mobiles")
+		.collect(Collectors.toList());
+				items.forEach((p)->System.out.println(p));
+	}
+	
+//2: Obtain a list of items belongs to category “Mobiles” and price is greater than 20000
+	public static void getListOfItemCaMoPrG() {
+		
+			Item.getAllItem().stream()
+				.filter((s)->s.getCategory()=="Mobiles")
+				.filter((s)->s.getPrice()>20000)
+				.forEach((s)->System.out.println(s));
+	}
+	
+	public static boolean check(List<Item> item) {
+		for(int i=0;i<item.size();i++) {
+			if(item.get(i).getCategory()!="Mobiles") {
+				return true;
+			}
+			
+		}
+		return false; 
+	}
+	
+//3: Obtain a list of order with items category is not “Mobiles”
+	public static void getListOfOrderCategoryNotMobile() {
+		
+		Order.getOrderList().stream()							
+							.filter((p)->p.getItems().stream()
+						
+									.allMatch(s->!s.getCategory().contains("Mobiles"))
+							).forEach((t)->System.out.println(t));
+						
+							
+							
+							
+	}
+	
+//	4: Obtain a list of items with category “Laptops” and then apply 5% discount
+	
+	public static void getListOfItemWithCatogaryLaptopAnd() {
+		
+		Item.getAllItem().stream()
+						.filter((s)->s.getCategory()=="Laptops")
+						.forEach((s)->{
+							System.out.print("id = "+s.getId());
+							System.out.print(" name = "+s.getName());
+							System.out.print(" price = "+(s.getPrice()-(s.getPrice()*5)/100));
+							System.out.print(" category = "+s.getCategory());
+						});
+	}
+	
+//	5: Obtain a list of items ordered by customers who are female 
+	public static void getListOfOrderByCustomerFemale() {
+		
+		
+		
+	}
+//6: Obtain a list of items ordered by customers between 01-Jan-2022 and 31-Oct-2022
+	
+	public static void getListItemOrderByCustomer() {
+		LocalDate d1=LocalDate.parse("2022-01-01");
+		LocalDate d2=LocalDate.parse("2022-10-31");
+		
+		Order.getOrderList().stream()							
+		.forEach((t)->System.out.println(t));
+		
+		
+	}
+	
+	public static void main(String[] args) {
+	//	getListOfItemBelogToCategoryMobile();
+	//	getListOfItemCaMoPrG();
+	//	getListOfItemWithCatogaryLaptopAnd();
+	//	getListOfOrderCategoryNotMobile();
+		getListItemOrderByCustomer();
+
+	}
+
+}

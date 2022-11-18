@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="renderSongs()">
+    <h2>Mp3 Player</h2>
+    <div>
+        <input type="text" id="song-text" placeholder="Enter your song" />
+        <button id="addSongBtn">Add Song</button>
+        <hr/>
+        <button onclick="reverseSongList()">Reverse</button>
+        <button onclick="sort()">Sort</button>
+        <ul id="songList"></ul>
+    </div>
+
+    <script>
+        let songList = ["O carol", "Manike mage hite", "When you love", "I am adicted"];
+        let flag = true;
+
+        function renderSongs(){
+            let ul = document.getElementById("songList");
+            ul.innerHTML = "";
+            songList.forEach(song=>{
+                ul.innerHTML += `<li>${song}</li>`
+            })
+        }
+      
+        function reverseSongList(){
+            songList.reverse();
+
+            renderSongs();
+        }
+
+      
+        function sort(){
+            songList.sort();
+            if(flag==false){
+                reverseSongList();
+            }
+            flag = !flag;
+
+            renderSongs();
+        }
+
+        let addSongBtn = document.getElementById("addSongBtn");
+        addSongBtn.addEventListener("click", function(){
+            console.log("button clicked");
+            let songTextBox = document.getElementById("song-text");
+            console.log(songTextBox.value);
+
+            songList.push(songTextBox.value);
+            renderSongs();
+
+            songTextBox.value = "";
+        });
+    </script>
+</body>
+</html>

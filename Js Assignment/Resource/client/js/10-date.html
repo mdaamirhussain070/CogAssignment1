@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#outer{
+            border: 4px solid black;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 150px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+
+    <!-- <script>
+        let timeEle = document.getElementById("time");
+        let dateEle = document.getElementById("date");
+
+        setInterval(function(){
+            let nowStr = new Date().toUTCString();
+        timeEle.innerText = nowStr.substring(16, 25);
+        dateEle.innerText = nowStr.substring(5, 17);
+        }, 1000)
+
+    </script> -->
+    <script>
+        let timeEle = document.getElementById("time");
+        let dateEle = document.getElementById("date");
+
+        let monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dev"];
+
+        setInterval(function(){
+            let now = new Date();
+            let hour = now.getHours();
+            let min = now.getMinutes();
+            let sec = now.getSeconds()
+            timeEle.innerText = `${hour}:${min}:${sec}`;
+
+            let date = now.getDate();
+            let month = monthArr[now.getMonth()];
+            let year = now.getFullYear();
+            dateEle.innerText = `${date} ${month} ${year}`;
+        }, 1000)
+
+    </script>
+
+</body>
+</html>

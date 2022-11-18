@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div>h2{This is demo page}+p{This is a demo paragraph and an html page}+div>ul>li*5{This is list $}^a -->
+
+    <h2>Demo</h2>
+    <input type="text" id="firstInput" />
+    <br/>
+    <button onclick="doTask()">Click</button>
+
+    <p id="res"></p>
+
+    <script>
+        // document.getElementsByTagName("input")[0]
+        let paraElement = document.getElementById("res");
+        let inputElemnet = document.getElementById("firstInput");
+
+        function doTask(){
+            console.log("Doing task")
+        if(inputElemnet.value.length>0){
+            // paraElement.innerText = `Welcome <mark>${inputElemnet.value}</mark>`;
+            paraElement.innerHTML = `Welcome <mark>${inputElemnet.value}</mark>`;
+        } else {
+            paraElement.innerText = ``;
+        }
+        }
+    </script>
+</body>
+</html>
