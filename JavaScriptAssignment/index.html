@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="center" onload="enablediable()">
+    <!-- onload="clearform() -->
+    <form id="myform" action="result.html"  >
+        <div class="container">
+            <h2>Registration</h2>
+            <h4>Personal Details</h4>
+            <table>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <tr>
+                    <td><input type="text" id="fulname" pattern="[A-Za-z]{3,15}"  name="name" placeholder="Enter your name" ></td>
+                    <td><input type="text"  id="dateOfBirth" pattern="^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$" name="date" placeholder="Enter birth date dd/mm/yyyy" ></td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter your email"  ></td>
+                    <!--  email regular expresiion "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" -->
+                </tr>
+                <th>Mobile Number</th>
+                <th>Gender</th>
+                <th>Occupatio</th>
+                <tr>
+                    <td><input type="text" id="mobileNumber" pattern="[6-9]{1}[0-9]{9}" name="nuumber" placeholder="Enter mobile number"  ></td>
+                    <td><input type="text" id="gender" pattern="^male$|^female$" name="gender" placeholder="Enter your gender"  ></td>
+                    <td><input type="text" id="occupation" pattern="[A-Za-z]{3,15}" name="occupation" placeholder="Enter occupation"  ></td>
+                </tr>
+            </table>
+            <h4>Identity Details</h4>
+            <table>
+                <th>ID Type</th>
+                <th>ID Number</th>
+                <th>Issue Authority</th>
+                <tr>
+                    <td><input type="text" id="idtype" pattern="[A-Za-z]{3,15}" name="idtype" placeholder="Enter ID type"  ></td>
+                    <!-- for Id Considered Pan Card -->
+                    <!-- pattern=“[A-Z]{5}[0-9]{4}[A-Z]{1}” -->
+                    <td><input type="text" id="idnumber" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" name="idnumber" placeholder="Enter ID number" ></td>
+
+                    <td><input type="text" id="issueauthority" pattern="[A-Za-z]{3,15}" name="issueauthority" placeholder="Enter issue department"  ></td>
+                </tr>
+                <th>Issue Date</th>
+                <th>Issue state</th>
+                <th>Expiry Date</th>
+                <tr>
+                    <td><input type="text" id="issuedate" pattern="^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$" name="issuedate" placeholder="Enter ID issue date"  ></td>
+                    <td><input type="text" id="issueState"  pattern="[A-Za-z]{3,15}" name="issueState" placeholder="Enter ID issue state"  ></td>
+                    <td><input type="text" id="expirydate" pattern="^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$" name="expirydate" placeholder="Enter ID expiry date"  ></td>
+                </tr>
+            </table><br>
+           <button type="submit" onclick="result()" id="btn">Next</button>
+           <!-- onclick="result()"  -->
+        </div>
+    </form>
+
+<script src="index.js"></script>    
+</body>
+</html>

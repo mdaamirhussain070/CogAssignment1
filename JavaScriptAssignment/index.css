@@ -1,0 +1,76 @@
+div {
+    size: 70px;
+    align-items: center;
+    background-color: rgb(233, 231, 230);
+    border-color: black;
+    margin-top: 30px;
+    margin-right: 180px;
+    align-content: center;
+    margin-left: 180px;
+    border-radius: 10px;
+    border-color: brown;
+}
+table{
+    size: 30;
+    text-align: left;
+    align-items: center;
+    margin-left: 30px;
+    border: 10px;
+    border-radius: 10px;
+    border-color: aqua;
+}
+.center{
+    align-items: center;
+}
+input[type=text] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: darkgray;
+  }
+  input[type=email] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: darkgray;
+  }
+  h2{
+    color: blue;
+    margin-left: 30px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    
+    
+  }
+  h4{
+    color: blue;
+    margin-left: 30px;
+    padding: 5px 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+  button[type=submit]{
+    background-color: #480af1f5; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-size-adjust: 100px;
+    text-align: center;
+    text-decoration:solid;
+    display: inline-block;
+    font-size: medium;
+    margin-left: 800px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+    
+  }
+  body{
+    background-color: rgb(104, 184, 184);
+  }
