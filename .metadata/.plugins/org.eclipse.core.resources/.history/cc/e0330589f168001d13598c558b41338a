@@ -87,12 +87,12 @@ public class DriverClass {
 	}
 	
 	public static void main(String[] args) {
-	//	getListOfItemBelogToCategoryMobile();   //1
-	//	getListOfItemCaMoPrG();                 //2 
-	//	getListOfItemWithCatogaryLaptopAnd();    //4
-	//	getListOfOrderCategoryNotMobile();       //3
-	//	getListItemOrderByCustomer();             //6
-	//	getListOfOrderByCustomerFemale();         //5
+	//	getListOfItemBelogToCategoryMobile();
+	//	getListOfItemCaMoPrG();
+		getListOfItemWithCatogaryLaptopAnd();
+	//	getListOfOrderCategoryNotMobile();
+	//	getListItemOrderByCustomer();
+	//	getListOfOrderByCustomerFemale();
 
 	}
 

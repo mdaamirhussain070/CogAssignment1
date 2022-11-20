@@ -16,8 +16,7 @@ public class DriverClass {
 		
 				List<Item> items=ItemDB.getAllItem().stream()
 				.filter((item)->item.getCategory()=="Mobiles")
-				.collect(Collectors.toList());
-				
+		.collect(Collectors.toList());
 				items.forEach((p)->System.out.println(p));
 	}
 	
@@ -87,12 +86,12 @@ public class DriverClass {
 	}
 	
 	public static void main(String[] args) {
-	//	getListOfItemBelogToCategoryMobile();   //1
-	//	getListOfItemCaMoPrG();                 //2 
-	//	getListOfItemWithCatogaryLaptopAnd();    //4
-	//	getListOfOrderCategoryNotMobile();       //3
-	//	getListItemOrderByCustomer();             //6
-	//	getListOfOrderByCustomerFemale();         //5
+	//	getListOfItemBelogToCategoryMobile();
+	//	getListOfItemCaMoPrG();
+	//	getListOfItemWithCatogaryLaptopAnd();
+		getListOfOrderCategoryNotMobile();
+	//	getListItemOrderByCustomer();
+	//	getListOfOrderByCustomerFemale();
 
 	}
 
