@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="music-info">
+            <h4 id="title"></h4>
+          </div>
+        <div class="music-container" id="music-container">
+            <audio src="./music/Fizool Hai.mp3" id="audio" controls></audio>
+        </div>
+        <div>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play">Play </i>
+            </button>
+        </div>
+    </div>
+   
+
+
+
+<script>
+      const musicContainer = document.getElementById('music-container');
+      const playBtn = document.getElementById('play');
+      const audio = document.getElementById('audio');
+      const title = document.getElementById('title');
+      const songs = ['Fizool Hai', 'Pehla Pyaar','Srivalli'];
+
+      // Keep track of song
+      let songIndex = 2;
+
+      // Initially load song details into DOM
+      loadSong(songs[songIndex]);
+
+      // Update song details
+      function loadSong(song) {
+        title.innerText = song;
+        audio.src = `./music/${song}.mp3`;
+      }
+
+      function playSong() {
+        musicContainer.classList.add('play');
+        audio.play();
+      }
+      function nextSong() {
+        songIndex++;
+        if (songIndex > songs.length - 1) {
+            songIndex = 0;
+          }
+        loadSong(songs[songIndex]);
+        const d=new Date();
+        console.log("Second: ",d.getSeconds());
+        console.log(d.getTime());
+        playSong();
+      }
+      //Envent to play song
+      playBtn.addEventListener('click', () => {
+        playSong();
+      });
+      //Event to play song after completion of first
+      audio.addEventListener('ended', nextSong);
+
+</script>
+
+    
+</body>
+</html>
